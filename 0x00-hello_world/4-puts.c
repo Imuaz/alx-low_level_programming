@@ -3,7 +3,7 @@
 /**
  * main - Printing point
  *
- * Ruturn: Always 0 (Success)
+ * Ruturn - Always 0 (Success)
  */
 int main(void)
 {
