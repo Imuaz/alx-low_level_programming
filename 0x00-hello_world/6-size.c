@@ -1,22 +1,22 @@
 #include <stdio.h>
 
 /**
- * main-printing out the size of various variable types
+ * main-printing size of variable
  *
- * Return: Always 0 (success)
+ * Return: Always 0 (Success)
  */
 int main(void)
 {
-	int v;
-	long int w;
-	long long int x;
-	float y;
-	char z;
+	int a;
+	long int b;
+	long long int c;
+	char d;
+	float f;
 
-	printf("The size of an interger is: %d byte(s)\n", sizeof(v));
-	printf("The size of a long interger is: %d byte(s)\n" sizeof(w));
-	printf("The size of a long long interger is: %d byte(s)\n" sizeof(x));
-	printf("The size of a float is: %d byte(s)\n" sizeof(y));
-	printf("The size of a character is: %d byte(s)\n" sizeof(z));
+	printf("Size of a char: %lu byte(s)\n", (unsigned long)sizeof(d));
+	printf("Size of an int: %lu byte(s)\n", (unsigned long)sizeof(a));
+	printf("Size of a long int: %lu byte(s)\n", (unsigned long)sizeof(b));
+	printf("Size of a long long int: %lu byte(s)\n", (unsigned long)sizeof(c));
+	printf("Size of a float: %lu byte(s)\n", (unsigned long)sizeof(f));
 	return (0);
 }
