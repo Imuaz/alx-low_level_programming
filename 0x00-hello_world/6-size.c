@@ -13,10 +13,10 @@ int main(void)
 	char y;
 	float z;
 
-	printf("The size of a character is: %lu byte(s)\n", (unsigned long)sizeof(y));
-	printf("The size of an interger is: %lu byte(s)\n", (unsigned long)sizeof(v));
-	printf("The size of a long interger is: %lu byte(s)\n", (unsigned long)sizeof(w));
-	printf("The size of a long long interger is: %lu byte(s)\n", (unsigned long)sizeof(x));
-	printf("The size of a float is: %lu byte(s)\n", (unsigned long)sizeof(z));
+	printf("The size of a char: %lu byte(s)\n", (unsigned long)sizeof(y));
+	printf("The size of an int: %lu byte(s)\n", (unsigned long)sizeof(v));
+	printf("The size of a long int: %lu byte(s)\n", (unsigned long)sizeof(w));
+	printf("The size of a long long int: %lu byte(s)\n", (unsigned long)sizeof(x));
+	printf("The size of a float: %lu byte(s)\n", (unsigned long)sizeof(z));
 	return (0);
 }
