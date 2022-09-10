@@ -1,18 +1,18 @@
 #include <stdio.h>
 
-
 /**
- * main-prints out mix alphabet
+ * main-prints out lowerUPPERcase Alphabet
  *
  * Return: Always 0 (Success)
  */
 int main(void)
 {
-	char letter;
+	char ch;
 
-	for (letter = 'a'&& letter = 'A'; letter <= 'z'&& letter = 'Z'; letter++)
-		putchar(letter);
+	for (ch = 'a'; ch <= 'z'; ch++)
+		putchar(ch);
+	for (ch = 'A'; ch <= 'Z'; ch ++)
+		putchar(ch);
 	putchar('\n');
-
 	return (0);
 }
