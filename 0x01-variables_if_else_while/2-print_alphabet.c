@@ -1,13 +1,15 @@
 #include <stdio.h>
 
-/**                                                * main - Prints out the lowercase alphabet
- * 
- * Return: Always 0.
+
+/**                                                * main-prints out lowercase alphabets
+ *
+ * Return: Always 0 (Success)
  */
 int main(void)                                    {
         char ch;
 
-        for (ch = 'a'; ch <= 'z'; ch++)
+
+	for (ch = 'a'; ch <= 'z'; ch++)
 		putchar(ch);
 	putchar('\n');                            
         return (0);                               }
