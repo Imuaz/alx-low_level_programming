@@ -8,9 +8,8 @@
  */
 int main(void)
 {
-	/*Using for loop to print lowercase Alphabet */
+	/*Using for loop to print lowercase Alphabet*/
 	char ch = 'a' ;
-
 	while (ch <= 'z')
 	{
 		putchar (ch);
