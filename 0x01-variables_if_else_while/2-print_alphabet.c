@@ -9,10 +9,12 @@
 int main(void)
 {
 	/*Using for loop to print lowercase Alphabet */
-	int Alphabet;
+	char ch = 'a' ;
 
-
-	for (Alphabet = 'a'; Alphabet <= 'z'; Alphabet++)
-	putchar(Alphabet);
+	while (ch <= 'z')
+	{
+		putchar (ch);
+		ch++;
+	}
 	return (0);
 }
