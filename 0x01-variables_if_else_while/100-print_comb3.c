@@ -1,32 +1,29 @@
 #include <stdio.h>
 
 /**
- * main-prints out all possible convinations of
- * two digits
+ * main-prints out all possible combs of 2 digits
  *
- * Return: Always 0 (success)
+ * Return: Always 0 (Success)
  */
 int main(void)
 {
-	int dgt1, dgt2;
+	int d1, d2;
 
-	for (dgt1 = 0; dgt1 <= 8; dgt1++)
+	for (d1 = 0; d1 <= 9; d1++)
 	{
-		for (dgt2 = 0; dgt2 <= 9; dgt2++)
+		for (d2 = 0; d2 <= 9; d2++)
 		{
-
-			putchar(dgt1 + '0');
-			putchar(dgt2 + '0');
-
-		if (dgt1 < 9 && dgt2 < 9)
+			putchar(d1 + '0');
+			putchar(d2 + '0');
+		if (d1 < 9 && d2 < 9)
 		{
 		putchar(',');
 		putchar(' ');
-		}
 		}
 
 	putchar('\n');
 
 	return (0);
+		}
 	}
 }
