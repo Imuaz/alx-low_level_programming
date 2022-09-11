@@ -15,11 +15,11 @@ int main(void)
 		for (dgt2 = 0; dgt2 <= 7; dgt2++)
 		{
 
-			putchar((dgt1 % 10) + '0');
-			putchar((dgt2 % 10) + '0');
+			putchar(dgt1 + '0');
+			putchar(dgt2 + '0');
 
-		if (dgt1 == 8  && dgt2 == 9)
-			continue;
+		if (dgt1 < 9 && dgt2 < 9)
+			
 
 		putchar(',');
 		putchar(' ');
