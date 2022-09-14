@@ -19,7 +19,7 @@ int main(void)
 			tot_sum += fbsum;
 
 		fb1 = fb2;
-		fb2 = fbsum
+		fb2 = fbsum;
 	}
 	printf("%.0f\n", tot_sum);
 
