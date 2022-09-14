@@ -1,12 +1,12 @@
-#include "main.h"
+#include "holberton.h"
 
 /**
-* positive_or_negative- tests function prints if i
-* nteger positive
+* main - tests function prints if integer positive
 * or negative
 * Return: 0
 */
-void positive_or_negative(int)
+
+int main(void)
 {
 	int i;
 
