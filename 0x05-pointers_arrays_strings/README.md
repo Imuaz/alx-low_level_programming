@@ -1,0 +1,1 @@
+This folder contains the tasks of the on pointers, arrays and strings which teaches:how to use pointers, arrays and strings, the differences between pointers and arrays, scope of variables and how tp manipulate strings
