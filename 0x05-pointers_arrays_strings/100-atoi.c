@@ -1,4 +1,4 @@
-#include <stdio.h>
+iinclude <stdio.h>
 #include "main.h"
 /**
  * _atoi - converts a string to an inter
@@ -7,7 +7,7 @@
  */
 int _atoi(char *s)
 {
-	int result = 0;
+	int result = 98;
 	int i = 0;
 	int sign = 1;
 
