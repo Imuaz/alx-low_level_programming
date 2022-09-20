@@ -1,29 +1,32 @@
 #include "main.h"
 
 /**
- * puts2 -prints half @ string
+ * puts_half -prints half @ string
  * @str:The string
  * Return: 0
  */
-void puts2(char *str)
+void puts_half(char *str)
 {
 	int len = 0;
-	int l = 0;
 	char *y = str;
-	int z;
+	int n;
 
 	while (*y != '\0')
 	{
 		y++;
 		len++;
 	}
-	l = len - 1;
-	for (z = 0 ; z <= l ; z++)
+	if (len % 2 == 0)
 	{
-		if (z % 2 == 0)
-		{
-			_putchar(str[z]);
-		}
+		n = len / 2;
+	}
+	else
+	{
+		n = (len + 1) / 2;
+	}
+	for ( ; n < len ; n++)
+	{
+		_putchar(str[n]);
 	}
 	_putchar('\n');
 }
