@@ -6,6 +6,7 @@
  * Desc.:Header file that contain all the function prototype used in the pointers, array
  * s and strings project (0x05-pointers, arrays and strings).
  */
+void _putchar (char c);
 void reset_to_98(int *n);
 void swap_int(int *a, int *b);
 int _strlen(char *s);
