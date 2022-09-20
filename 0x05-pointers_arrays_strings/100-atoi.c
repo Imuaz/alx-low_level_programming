@@ -8,21 +8,19 @@
 int _atoi(char *s)
 {
 	unsigned int result = 0;
-	int i = 0;
 	int sign = 1;
 
-	if (*s[i] == '-')
-	{
-		sign *= -1;
-		i++;
-	}
-	while (*s[i])
-	{
-		if (!(*s[i] - '0' >= 0 && *s[i] - '0' <= 9))
-		return (-1);
+	do {
+		if (*s == '-')
+			sign *= -1;
+		else if
+			(*s >= '0' && *s <= '9')
 
-		result = result * 10 + *s[i] - '0';
-		i++;
+		result = result * 10 + (*s - '0');
+		else if
+			(result > 0)
+				break;
 	}
+
 	return (result * sign);
 }
