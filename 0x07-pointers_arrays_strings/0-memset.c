@@ -13,9 +13,9 @@
 char *_memset(char *s, char b, unsigned int n);
 {
 	unsigned int i;
-	unsigned char memp, bit;
+	unsigned char *memp, bit;
 
-	memp = s;
+	*memp = s;
 	bit = b;
 
 	for (i = 0; i < n; i++)
@@ -24,4 +24,3 @@ char *_memset(char *s, char b, unsigned int n);
 	}
 	return (memp);
 }
-
