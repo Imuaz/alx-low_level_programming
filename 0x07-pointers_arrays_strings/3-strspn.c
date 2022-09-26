@@ -11,11 +11,11 @@
  */
 unsigned int _strspn(char *s, char *accept)
 {
-	int len, i;
+	unsigned int len, i;
 
 	while (i > 0)
 	{
-		len = strspn(accept, s);
+		len = strspn(s, accept);
 		i++;
 	}
 	return (len);
