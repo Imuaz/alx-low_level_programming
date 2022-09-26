@@ -11,12 +11,9 @@
  */
 unsigned int _strspn(char *s, char *accept)
 {
-	unsigned int len, i;
+	unsigned int len;
 
-	for (i = 0; i >= '\0'; i++)
-	{
 		len = strspn(accept, s);
 
 		return (len);
-	}
 }
