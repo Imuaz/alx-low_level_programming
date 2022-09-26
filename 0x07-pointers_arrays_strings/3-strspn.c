@@ -13,7 +13,7 @@ unsigned int _strspn(char *s, char *accept)
 {
 	unsigned int len;
 
-		len = strspn(accept, s);
+		len = strspn(s, accept);
 
-		return (len / '0');
+		return (len);
 }
