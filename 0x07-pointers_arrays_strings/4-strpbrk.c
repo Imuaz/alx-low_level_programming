@@ -12,9 +12,18 @@
  */
 char *_strpbrk(char *s, char *accept)
 {
-	char *result;
+	int i;
 
-	result = strpbrk(s, accept);
+	while (*s)
+	{
+		for (i = 0; accept[i]; i++)
+		{
+			if (*s == accept[i])
+				return (s);
+		}
 
-	return (&result);
+		s++;
+	}
+
+	return ('\0');
 }
