@@ -8,7 +8,7 @@
  * ototype functions of th 0x07-even_more_po
  * inters arrays and strings
  */
-#include <string.h>0
+#include <string.h>
 #include <stddef.h>
 
 int _putchar(char c);
