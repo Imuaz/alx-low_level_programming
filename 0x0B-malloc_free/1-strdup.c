@@ -3,7 +3,7 @@
 /**
  * *_strdup - returns a pointer to a newly allocated space in
  * memory, which contains a copy of the string given as a parameter.
- * @*str: string to be coppied
+ * @str: string to be coppied
  * Return: returns a pointer to the duplicated string on success
  * and NULL is str=NULL or insufficient memory was available
  */
