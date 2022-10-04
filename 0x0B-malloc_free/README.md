@@ -10,8 +10,8 @@ This project teaches:
 the project contains the following taks:
 * **0. Float like a butterfly, sting like a bee**
   * [0-create_array.c](0-create_array.c): C function that creates an array of chars, and initialized with a specific char
-	  * char array is initialized to a parameter `c`.
-		* the fuction returns `NULL` if `size` = `0`. and returns a pointer to the array, or `NULL` if it fails.
+	* char array is initialized to a parameter `c`.
+	* the fuction returns `NULL` if `size` = `0`. and returns a pointer to the array, or `NULL` if it fails.
 
 * **1. The woman who has no imagination has no wings**
   * [1-strdup.c](1-strdup.c): C function that returns a pointer to a new string which is a duplicate of the string `str`. Memory for the new string is obtained with `malloc`, and can be freed with `free`.
@@ -54,4 +54,10 @@ the project contains the following taks:
 
 | File | Prototypes |
 |------|------------|
-|0-create_array.c   |char *create_array(unsigned int size, char c)|
+|`0-create_array.c` |`char *create_array(unsigned int size, char c)`|
+|`1-strdup.c` |`char *_strdup(char *str)`|
+|`2-str_concat.c`|`char *str_concat(char *s1, char *s2)`|
+|`3-alloc_grid.c`|`int **alloc_grid(int width, int height)`|
+|`4-free_grid.c` |`void free_grid(int **grid, int height)`|
+|`100-argstostr.c`|`char *argstostr(int ac, char **av)`|
+|`101-strtow.c` |`char **strtow(char *str)`|
