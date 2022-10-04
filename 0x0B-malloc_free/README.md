@@ -54,7 +54,7 @@ the project contains the following taks:
 
 		| File | Prototypes |
 		|------|------------|
-		| `0-create_array.c` | `char *create_array(unsigned int size, char c)` |
+		|`0-create_array.c` | `char *create_array(unsigned int size, char c)` |
 		|--------------------|------------------------------------------------|
 		| `1-strdup.c` | `char *_strdup(char *str)` |
 		|--------------|---------------------------|
@@ -67,4 +67,3 @@ the project contains the following taks:
 		|`100-argstostr.c`|`char *argstostr(int ac, char **av)` |
 		|---------------- |------------------------------------ |
 		|` 101-strtow.c`  |`char **strtow(char *str)`|
-		|-----------------|------------------------- |
