@@ -13,7 +13,7 @@ char *argstostr(int ac, char **av)
 	int size, i, j, k;
 	char *StrDup;
 
-	if (ac == 0; || av == NULL)
+	if (ac == 0 || av == NULL)
 		return (NULL);
 	size = 0;
 	/* now, counting the num. of chars in each string*/
