@@ -53,5 +53,4 @@ the project contains the following taks:
 * [main.h](main.h): header file containing all the function prototypes used in the project
 
 		| File | Prototypes |
-		|------|------------|
 		|0-create_array.c   |char *create_array(unsigned int size, char c)|
