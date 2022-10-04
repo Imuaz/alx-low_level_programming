@@ -9,8 +9,8 @@
  */
 char *_strdup(char *str)
 {
+	char *strDup;
 	int i, j;
-	char *StrDup;
 
 	if (str == NULL)
 		return (NULL);
@@ -18,13 +18,14 @@ char *_strdup(char *str)
 	while (str[i] != '\0')
 		i++;
 	i++;
-	StrDup = malloc(sizeof(*str) * i);
-	if (StrDup == NULL)
+	strDup = malloc(sizeof(*str) * i);
+	if (strDup == NULL)
 		return (NULL);
 	j = 0;
 	while (str[j] != '\0')
 	{
-		StrDup[j] = str[j];
+		strDup[j] = str[j];
 		j++;
 	}
-	return (StrDup);
+	return (strDup);
+}
