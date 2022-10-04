@@ -55,5 +55,3 @@ the project contains the following taks:
 		| File | Prototypes |
 		|------|------------|
 		|0-create_array.c   |char *create_array(unsigned int size, char c)|
-		|-------------------|------------------------------------------------|
-		
