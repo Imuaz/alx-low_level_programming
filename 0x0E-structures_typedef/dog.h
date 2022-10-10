@@ -3,13 +3,13 @@
 
 #include <stdlib.h>
 /**
- * File: dog.h
- * Athr: Idris Muazu Yakub
+ * file: dog.h
+ * Authr: Idris Muazu Yakub
  * Desc: Header file that defines a new type "struct dog"
  */
 
 /**
- * struct dog -A new type describing a dog
+ * struct dog: new type describing a dog
  * @name: the name of the dog
  * @age: The dog age
  * @owner: the dog owner
@@ -24,7 +24,7 @@ struct dog
 /**
  * dog_t - A typedef for struct dog
  */
-//typedef struct dog dog_t;
+typedef struct dog dog_t;
 
 void init_dog(struct dog *d, char *name, float age, char *owner);
 void print_dog(struct dog *d);
