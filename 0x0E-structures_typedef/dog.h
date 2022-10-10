@@ -2,6 +2,7 @@
 #define DOG_H
 
 #include <stdlib.h>
+#include <stdio.h>
 /*
  * File: dog.h
  * Authr: Idris Muazu Yakub
