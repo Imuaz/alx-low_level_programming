@@ -1,6 +1,7 @@
 #ifndef CALC_H
 #define CALC_H
-
+#include <stdio.h>
+#include <stdlib.h>
 /*
  * file: 3-calc.h
  * Authr: Idris Muazu Yakub
