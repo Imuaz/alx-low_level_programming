@@ -4,7 +4,7 @@
 /*
  * File: variadic_functions.h
  * Auth: Idris Muazu Yakub
- * Desc: Header file that contains all function prototypes 
+ * Desc: Header file that contains all function prototypes
  * used in the 0x10-variadic_functions directory.
  */
 
@@ -16,13 +16,13 @@
  * @print: A function pointer to a function that prints
  *         a data type corresponding to symbol.
  */
-/*typedef struct printer
+typedef struct printer
 {
 	char *symbol;
 	void (*print)(va_list arg);
 
 } printer_t;
-*/
+
 int sum_them_all(const unsigned int n, ...);
 void print_numbers(const char *separator, const unsigned int n, ...);
 void print_strings(const char *separator, const unsigned int n, ...);
