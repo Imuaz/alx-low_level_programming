@@ -1,28 +1,31 @@
-#ifndef VARFUNC
-#define VARFUNC
+#ifndef VARIADIC_FUNCTIONS_H
+#define VARIADIC_FUNCTIONS_H
 
 /*
- * file: variadic_functions.h
- * Authr: Idris Muazu Yakub
- * Desc: header file that contains prototypes of all functions
- * used and the prototype of the function _putchar
+ * File: variadic_functions.h
+ * Auth: Idris Muazu Yakub
+ * Desc: Header file that contains all function prototypes 
+ * used in the 0x10-variadic_functions directory.
  */
+
+#include <stdarg.h>
 
 /**
- * struc typ - Struc operators
- * @c: character pointer
- * @tp: function pointer
+ * struct printer - A new struct type defining a printer.
+ * @symbol: A symbol representing a data type.
+ * @print: A function pointer to a function that prints
+ *         a data type corresponding to symbol.
  */
-//typedef struc typ
-/*{
-	char *c;
-	void (*tp)(va_list var);
-} typ_t;*/
+/*typedef struct printer
+{
+	char *symbol;
+	void (*print)(va_list arg);
 
-int _putchar(char c);
+} printer_t;
+*/
 int sum_them_all(const unsigned int n, ...);
 void print_numbers(const char *separator, const unsigned int n, ...);
 void print_strings(const char *separator, const unsigned int n, ...);
 void print_all(const char * const format, ...);
 
-#endif /*VARIADIC_FUNCTIONS_H*/
+#endif
