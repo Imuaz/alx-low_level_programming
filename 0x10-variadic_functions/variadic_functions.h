@@ -10,6 +10,7 @@
 
 #include <stdarg.h>
 #include <stdio.h>
+#include <stdlib.h>
 /**
  * struct printer - A new struct type defining a printer.
  * @symbol: A symbol representing a data type.
