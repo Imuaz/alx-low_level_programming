@@ -13,11 +13,11 @@
  * @c: character pointer
  * @tp: function pointer
  */
-typedef struc typ
-{
+//typedef struc typ
+/*{
 	char *c;
 	void (*tp)(va_list var);
-} typ_t;
+} typ_t;*/
 
 #include <stdarg.h>
 #include <stdio.h>
