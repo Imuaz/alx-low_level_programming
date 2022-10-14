@@ -1,15 +1,23 @@
-#ifndef VARIADIC_FUNCTIONS_H
-#define VARIADIC_FUNCTIONS_H
+#ifndef VARFUNC
+#define VARFUNC
 
-/**
+/*
  * file: variadic_functions.h
  * Authr: Idris Muazu Yakub
  * Desc: header file that contains prototypes of all functions
-         used and the prototype of the function _putchar
+ * used and the prototype of the function _putchar
  */
 
-#include <stdio.h>
-#include <stdlib.h>
+/**
+ * struc typ - Struc operators
+ * @c: character pointer
+ * @tp: function pointer
+ */
+typedef struc typ
+{
+	char *c;
+	void (*tp)(va_list var);
+} typ_t;
 
 int _putchar(char c);
 int sum_them_all(const unsigned int n, ...);
