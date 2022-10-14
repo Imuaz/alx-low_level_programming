@@ -17,17 +17,11 @@
  * @print: A function pointer to a function that prints
  *         a data type corresponding to symbol.
  */
-typedef struct printer
+typedef struct typ
 {
-	char *symbol;
-	void (*print)(va_list arg);
-
-} printer_t;
-
-void print_i(va_list list, char *s);
-void print_c(va_list list, char *sep);
-void print_s(va_list list, char *sep);
-void print_f(va_list list, char *sep);
+	char *c;
+	void (*tp)(va_list var);
+} typ_t;
 
 int sum_them_all(const unsigned int n, ...);
 void print_numbers(const char *separator, const unsigned int n, ...);

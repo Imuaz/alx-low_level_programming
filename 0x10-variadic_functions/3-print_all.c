@@ -1,5 +1,9 @@
 #include "variadic_functions.h"
 
+void print_i(va_list list, char *s);
+ 27 void print_c(va_list list, char *sep);
+ 28 void print_s(va_list list, char *sep);
+ 29 void print_f(va_list list, char *sep);
 /**
  * print_i - prints interger
  * @list: arguement list
