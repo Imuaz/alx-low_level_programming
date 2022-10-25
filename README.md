@@ -19,3 +19,4 @@ This repository contains programs written for the low-level programming and algo
 - [0x0E-structures_typedef](0x0E-structures_typedef)
 - [0x0F-function_pointers](0x0F-function_pointers)
 - [0x10-variadic_functions](0x10-variadic_functions)
+- [0x12-singly_linked_lists](0x12-singly_linked_lists)
