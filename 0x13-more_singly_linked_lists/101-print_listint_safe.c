@@ -1,5 +1,4 @@
 #include "lists.h"
-#include <stdint.h>
 
 int print_listformat(const listint_t *head);
 
@@ -14,7 +13,7 @@ size_t print_listint_safe(const listint_t *head)
 	const listint_t *temp = head, *slow = head, *fast = head;
 	int i = 0;
 
-	if (head == NULL)
+	if (!head)
 		exit(98);
 
 	while (slow && fast && fast->next)
@@ -31,7 +30,7 @@ size_t print_listint_safe(const listint_t *head)
 				slow = slow->next;
 				fast = fast->next;
 			}
-			while (temp != NULL)
+			while (temp)
 			{
 				if (temp == fast)
 				{
