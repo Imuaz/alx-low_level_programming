@@ -1,95 +1,45 @@
+#include <stdio.h>
 #include "lists.h"
-
-size_t looped_listint_count(listint_t *head);
-size_t free_listint_safe(listint_t **h);
+#include <stdlib.h>
 
 /**
- * looped_listint_count - Counts the number of unique nodes
- * in a looped listint_t linked list.
- * @head: A pointer to the head of the listint_t to check.
- *
- * Return:umber of unique nodes in the list or 0 If the list is not looped
- */
-size_t looped_listint_count(listint_t *head)
+* free_listint_safe - A function that frees a list
+* @h: A pointer listint_t structure
+* Return: The size of the list that was free'd
+*/
+size_t free_listint_safe(listint_t **h)
 {
-	listint_t *current, *node;
-	size_t index = 1;
+	size_t counter = 0;
+	listint_t *temp;
 
-	if (head == NULL || head->next == NULL)
-		return (0);
-
-	current = head->next;
-	node = (head->next)->next;
-
-	while (node)
+	temp = *h;
+	while (temp)
 	{
-		if (current == node)
-		{
-			current = head;
-			while (current != node)
-			{
-				index++;
-				current = current->next;
-				node = node->next;
-			}
-
-			current = current->next;
-			while (current != node)
-			{
-				index++;
-				current = current->next;
-			}
-
-			return (index);
-		}
-
-		current = current->next;
-		node = (node->next)->next;
+		temp = *h;
+		temp = temp->next;
+		free_list(temp);
+		counter++;
 	}
+	*h = NULL;
 
-	return (0);
+	return (counter);
 }
 
 /**
- * free_listint_safe - Frees a listint_t list safely
- * @h: A pointer to the address of
- * the head of the listint_t list.
- *
- * Return: The size of the list that was freed.
- *
- * Description: The function sets the head to NULL.
- */
-size_t free_listint_safe(listint_t **h)
+* free_list - A function that frees a listint_t recursively
+* @head: A pointer to the listint_t structure
+* Return: Nothing
+*/
+void free_list(listint_t *head)
 {
-	listint_t *tmp;
-	size_t nodes, idx;
+	listint_t *temp;
 
-	nodes = looped_listint_count(*h);
-
-	if (nodes == 0)
+	if (head)
 	{
-		for (; h != NULL && *h != NULL; nodes++)
-		{
-			tmp = malloc(sizeof(listint_t));
-			tmp = (*h)->next;
-			free(*h);
-			*h = tmp;
-		}
+		temp = head;
+		temp = temp->next;
+		free(temp);
+		free_list(temp);
 	}
-
-	else
-	{
-		for (idx = 0; idx < nodes; idx++)
-		{
-			tmp = (*h)->next;
-			free(*h);
-			*h = tmp;
-		}
-
-		*h = NULL;
-	}
-
-	h = NULL;
-
-	return (nodes);
+	free(head);
 }
