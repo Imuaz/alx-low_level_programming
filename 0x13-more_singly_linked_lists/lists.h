@@ -8,6 +8,7 @@
  * the functions and type definations used in the project
  */
 
+#include <stdint.h>
 #include <stdlib.h>
 #include <stdio.h>
 

@@ -1,48 +1,45 @@
 #include "lists.h"
-#include <stdint.h>
-
-int print_listformat(const listint_t *head);
 
 /**
- * print_listint_safe - prints lists with loops
+ * print_listint_safe - prints a listint_t linked list with a loop
  * @head: pointer to first node
  *
- * Return: size of list
+ * Return: the number of nodes in the list
 */
 size_t print_listint_safe(const listint_t *head)
 {
-	const listint_t *temp = head, *slow = head, *fast = head;
+	const listint_t *front = head, *back = head;
 	int i = 0;
 
-	if (head == NULL)
+	if (!head)
 		exit(98);
 
-	while (slow && fast && fast->next)
+	while (front && back && back->next)
 	{
-		slow = slow->next;
-		fast = fast->next->next;
+		front = front->next;
+		back = back->next->next;
 
-		if (slow == fast)
+		if (front == back)
 		{
-			slow = head;
+			front = head;
 
-			while (slow->next != fast->next)
+			while (front->next != back->next)
 			{
-				slow = slow->next;
-				fast = fast->next;
+				front = front->next;
+				back = back->next;
 			}
-			while (temp != NULL)
+			while (head)
 			{
-				if (temp == fast)
+				if (head == back)
 				{
-					printf("[%p] %d\n", (void *)temp, temp->n);
+					printf("[%p] %d\n", (void *)head, head->n);
 					i++;
-					printf("-> [%p] %d\n", (void *)fast->next, fast->next->n);
+					printf("-> [%p] %d\n", (void *)back->next, back->next->n);
 					return (i);
 				}
 				i++;
-				printf("[%p] %d\n", (void *)temp, temp->n);
-				temp = temp->next;
+				printf("[%p] %d\n", (void *)head, head->n);
+				head = head->next;
 			}
 
 		}
@@ -52,17 +49,17 @@ size_t print_listint_safe(const listint_t *head)
 }
 
 /**
- * print_listformat - prints formatted list with address
+ * print_listformat - prints list format with address
  * @head: pointer to head node
  *
- * Return: no of elements in list
+ * Return: nodes in the list
 */
 int print_listformat(const listint_t *head)
 {
 	const listint_t *temp = head;
 	int i = 0;
 
-	while (temp != NULL)
+	while (temp)
 	{
 		i++;
 		printf("[%p] %d\n", (void *)temp, temp->n);
