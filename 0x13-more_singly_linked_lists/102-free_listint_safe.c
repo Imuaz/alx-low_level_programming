@@ -15,7 +15,6 @@ size_t looped_listint_count(listint_t *head)
 	listint_t *current, *node;
 	size_t index = 1;
 
-	node = malloc(sizeof(listint_t));
 	if (head == NULL || head->next == NULL)
 		return (0);
 
@@ -71,6 +70,7 @@ size_t free_listint_safe(listint_t **h)
 	{
 		for (; h != NULL && *h != NULL; nodes++)
 		{
+			tmp = malloc(sizeof(listint_t));
 			tmp = (*h)->next;
 			free(*h);
 			*h = tmp;
