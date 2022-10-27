@@ -1,7 +1,7 @@
 #ifndef MAIN_H
 #define MAIN_H
 
-/**
+/*
  * File: main.h
  * Authr: Idris Muazu Yakub
  * Desc: Header file that contains the prototypes of all
