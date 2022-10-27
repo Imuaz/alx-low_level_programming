@@ -14,10 +14,8 @@ unsigned int binary_to_uint(const char *b)
 
 	if (*b == '\0')
 		return (0);
-
 	for (i = 0; b[i];)
 		i++;
-
 	for (i -= 1; i >= 0; i--)
 	{
 		if (b[i] != '0' && b[i] != '1')
@@ -26,6 +24,5 @@ unsigned int binary_to_uint(const char *b)
 		num += (b[i] - '0') * mult;
 		mult *= 2;
 	}
-
 	return (num);
 }
