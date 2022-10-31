@@ -14,12 +14,12 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	char *fd;
 
 	fd = malloc(sizeof(char) * letters);
-	if (!fd || !filename)
+	if (fd == NULL || filename == NULL)
 		return (0);
 
 	ftopen = open(filename, O_RDONLY);
-	ftread = read(o, fd, letters);
-	ftwrite = write(STDOUT_FILENO, fd, r);
+	ftread = read(ftopen, fd, letters);
+	ftwrite = write(STDOUT_FILENO, fd, ftread);
 
 	if (ftopen == -1 || ftread == -1 || ftwrite == -1 || ftwrite != ftread)
 	{
