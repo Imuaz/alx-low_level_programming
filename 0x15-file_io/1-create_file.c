@@ -8,7 +8,8 @@
  */
 int create_file(const char *filename, char *text_content)
 {
-	int cfopen, cfwrite, i;
+	int cfopen, i;
+	ssize_t cfwrite;
 
 	if (!filename)
 		return (-1);
@@ -22,9 +23,14 @@ int create_file(const char *filename, char *text_content)
 	cfopen = open(filename, O_CREAT | O_RDWR | O_TRUNC, 0600);
 	cfwrite = write(cfopen, text_content, i);
 
-	if (cfopen == -1 || cfwrite == -1)
+	if (cfopen == -1)
 		return (-1);
 
+	if (cfwrite == -1)
+	{
+		write(1, "fails", 6);
+		return (-1);
+	}
 	close(cfopen);
 
 	return (1);
