@@ -8,25 +8,26 @@
  */
 int append_text_to_file(const char *fiiame, char *text_content)
 {
-	int topn, twrt, i;
+	int fd, tappend, i;
 
-	if (!fiiame)
+	if (!filename)
 		return (-1);
-
 	if (text_content)
 	{
+		fd = open(filename, O_WRONLY | O_APPEND);
+		if (fd == -1)
+			return (-1);
 		i = 0;
-		while (*(text_content + 1) != '\0')
+		while (*(text_content + i) != '\0')
 			i++;
+		tappend = write(fd, text_content, i);
+		if (tappend == -1)
+		{
+			close(fd);
+			write(1, "fails", 6);
+			return (-1);
+		}
 	}
-
-	topn = open(fiiame, O_WRONLY | O_APPEND);
-	twrt = write(topn, text_content, i);
-
-	if (topn == -1 || twrt == -1)
-		return (-1);
-
-	close(topn);
-
+	close(fd);
 	return (1);
 }
