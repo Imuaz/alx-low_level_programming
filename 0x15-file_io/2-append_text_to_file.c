@@ -10,11 +10,11 @@ int append_text_to_file(const char *fiiame, char *text_content)
 {
 	int fd, tappend, i;
 
-	if (!filename)
+	if (!fiiame)
 		return (-1);
 	if (text_content)
 	{
-		fd = open(filename, O_WRONLY | O_APPEND);
+		fd = open(fiiame, O_WRONLY | O_APPEND);
 		if (fd == -1)
 			return (-1);
 		i = 0;
