@@ -11,7 +11,8 @@ int create_file(const char *filename, char *text_content)
 	int fd, i;
 	ssize_t cfwrite;
 
-	fd = open(filename, O_CREAT | O_RDWR | O_TRU    NC, 0600);
+	fd = open(filename, O_CREAT | O_RDWR | O_TRUNC, 0600);
+
 	if (!filename || fd == NULL)
 		return (-1);
 
