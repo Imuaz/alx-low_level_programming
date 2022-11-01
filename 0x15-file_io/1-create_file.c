@@ -8,22 +8,22 @@
  */
 int create_file(const char *filename, char *text_content)
 {
-	int cfopen, i;
+	int *fd, i;
 	ssize_t cfwrite;
 
 	if (!filename)
 		return (-1);
 
-	if (text_content)
+	if (text_content != NULL)
 	{
 		for (i = 0; text_content[i];)
 			i++;
 	}
 
-	cfopen = open(filename, O_CREAT | O_RDWR | O_TRUNC, 0600);
-	cfwrite = write(cfopen, text_content, i);
+	fd = open(filename, O_CREAT | O_RDWR | O_TRUNC, 0600);
+	cfwrite = write(fd, text_content, i);
 
-	if (cfopen == -1)
+	if (fd == -1)
 		return (-1);
 
 	if (cfwrite == -1)
@@ -31,7 +31,7 @@ int create_file(const char *filename, char *text_content)
 		write(1, "fails", 6);
 		return (-1);
 	}
-	close(cfopen);
+	close(fd);
 
 	return (1);
 }
