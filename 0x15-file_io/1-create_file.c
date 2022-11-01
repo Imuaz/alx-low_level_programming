@@ -8,13 +8,13 @@
  */
 int create_file(const char *filename, char *text_content)
 {
-	int fd, i = 0;
+	int fd, i;
 	ssize_t cfwrite;
 
 	if (!filename)
 		return (-1);
 
-	if (text_content != NULL)
+	if (text_content)
 	{
 		for (i = 0; text_content[i];)
 			i++;
@@ -28,6 +28,8 @@ int create_file(const char *filename, char *text_content)
 		write(1, "fails", 6);
 		return (-1);
 	}
+	if (!text_content)
+		fd = open(filename, O_REAT);
 	}
 	close(fd);
 
