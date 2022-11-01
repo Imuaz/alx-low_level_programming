@@ -11,16 +11,15 @@ int create_file(const char *filename, char *text_content)
 	int fd, i;
 	ssize_t cfwrite;
 
-	if (!filename)
+	fd = open(filename, O_CREAT | O_RDWR | O_TRU    NC, 0600);
+	if (!filename || !fd)
 		return (-1);
 
 	if (text_content)
 	{
 		for (i = 0; text_content[i];)
 			i++;
-	fd = open(filename, O_CREAT | O_RDWR | O_TRUNC, 0600);
-	if (fd == -1)
-		return (-1);
+
 	cfwrite = write(fd, text_content, i);
 	if (cfwrite == -1)
 	{
