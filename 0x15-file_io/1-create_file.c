@@ -12,7 +12,7 @@ int create_file(const char *filename, char *text_content)
 	ssize_t cfwrite;
 
 	fd = open(filename, O_CREAT | O_RDWR | O_TRU    NC, 0600);
-	if (!filename || !fd)
+	if (!filename || fd == NULL)
 		return (-1);
 
 	if (text_content)
