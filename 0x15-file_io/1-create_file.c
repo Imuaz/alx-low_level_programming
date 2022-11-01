@@ -18,7 +18,6 @@ int create_file(const char *filename, char *text_content)
 	{
 		for (i = 0; text_content[i];)
 			i++;
-
 	fd = open(filename, O_CREAT | O_RDWR | O_TRUNC, 0600);
 	if (fd == -1)
 		return (-1);
@@ -27,10 +26,6 @@ int create_file(const char *filename, char *text_content)
 	{
 		write(1, "fails", 6);
 		return (-1);
-	}
-	else if (!text_content)
-	{
-		fd = open(filename,"empty.txt", O_REAT);
 	}
 	}
 	close(fd);
