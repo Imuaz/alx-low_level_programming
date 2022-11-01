@@ -15,7 +15,8 @@ int append_text_to_file(const char *fiiame, char *text_content)
 
 	if (text_content)
 	{
-		for (i = 0; text_content[i + 1];)
+		i = 0;
+		while (*(text_content + 1) != '\0')
 			i++;
 	}
 
