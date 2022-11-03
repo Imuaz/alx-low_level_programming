@@ -1,21 +1,7 @@
 #include "main.h"
 
-/**
- * main - Copies the content of a file to another file.
- * @ac: Argument count
- * @av: argument values
- * Return: 0 on succes, -1 on error.
- */
-int main(int ac, char *av[])
-{
-	if (ac != 3)
-	{
-		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
-		exit(97);
-	}
-	cp(av[1], av[2]);
-	return (0);
-}
+void cp(char *file_from, char *file_to);
+void file_check(int en, char *filename);
 /**
  * file_check - Read file and checks error
  * @en: Error number
@@ -77,4 +63,20 @@ void cp(char *file_from, char *file_to)
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd_write);
 		exit(100);
 	}
+}
+/**
+ * main - Copies the content of a file to another file.
+ * @ac: Argument count
+ * @av: argument values
+ * Return: 0 on succes, -1 on error.
+ */
+int main(int ac, char *av[])
+{
+	if (ac != 3)
+	{
+		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
+		exit(97);
+	}
+	cp(av[1], av[2]);
+	return (0);
 }
