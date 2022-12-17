@@ -25,8 +25,8 @@ This project introduces me to the basic of C programming language, is touches th
 **1. Compiler**
 * [1-compiler](1-compiler): A shell a script that compiles a C file but does not link
   * C file name is saved in the variable `$CFILE`
-  * * The output file is named the same as the C file, but with the extension `.o` instead of `.c`.
-  * * for example: if the C file is `main.c`, the output file is `main.o`
+  * The output file is named the same as the C file, but with the extension `.o` instead of `.c`.
+  * for example: if the C file is `main.c`, the output file is `main.o`
 
 **2. Assembler**
 * [2-assembler](2-assembler):A shell script that generates the assembly code of a C code and save it in an output file
