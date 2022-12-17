@@ -21,11 +21,13 @@ int main(void)
 			putchar((num2 % 10) + '0');
 			num2++;
 			if (num1 <= 98)
+			{
 				putchar(',');
-			putchar(' ');
+				putchar(' ');
+			}
 		}
 	}
-		putchar('\n');
+	putchar('\n');
 
-		return (0);
+	return (0);
 }
