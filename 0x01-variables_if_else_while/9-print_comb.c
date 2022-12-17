@@ -14,8 +14,10 @@ int main(void)
 		putchar((p_comb % 10) + '0');
 		p_comb++;
 		if (p_comb <= 9)
+		{
 			putchar(',');
-		putchar(' ');
+			putchar(' ');
+		}
 	}
 	putchar('\n');
 
