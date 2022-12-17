@@ -40,11 +40,11 @@ I also learn;
  * the variable `n` stores a different value every time the program is run
  * understanding what `rand`, `srand`, `RAND_MAX` do is not required.
  * the output of the program is;
-  - The number, followed by
-	 * if the number is greater than 0: `is positive`
-	 * if the number is 0: `is zero`
-	 * if the number is less than 0: `is negative`
-	- followed by a new line.
+   - The number, followed by
+	  * if the number is greater than 0: `is positive`
+		* if the number is 0: `is zero`
+		* if the number is less than 0: `is negative`
+	 - followed by a new line.
 
 **1. The last digit**
 
