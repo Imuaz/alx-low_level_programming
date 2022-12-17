@@ -19,8 +19,10 @@ int main(void)
 			putchar(num2 + '0');
 			num2++;
 			if (num1 < 8)
+			{
 				putchar(',');
-			putchar(' ');
+				putchar(' ');
+			}
 		}
 	}
 	putchar('\n');
