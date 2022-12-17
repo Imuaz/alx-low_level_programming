@@ -34,7 +34,7 @@ I also learn;
 
 **0. Positive anything is better than negative nothing**
 
-* [0-positive_or_negative.c](./0-positive_or_negative.c): C program that assigns a random number to the variable `n` each time it is executed.
+1. [0-positive_or_negative.c](./0-positive_or_negative.c): C program that assigns a random number to the variable `n` each time it is executed.
   * it is the completion of this [source code](https://alx-intranet.hbtn.io/rltoken/rrqNDWjrCWdARnWFLPExPw).
   * it prints whether the number stored in the variable `n` is positive or negative
   * the variable `n` stores a different value every time the program is run
@@ -48,7 +48,7 @@ I also learn;
 
 **1. The last digit**
 
-* [1-last_digit.c](./1-last_digit.c): C program that assigns a random number to the variable `n` each time it is executed.
+2. [1-last_digit.c](./1-last_digit.c): C program that assigns a random number to the variable `n` each time it is executed.
   * it is the completion of this [source code](https://alx-intranet.hbtn.io/rltoken/5HWhPDsq3jq1yCRQFrLl4Q).
   * it prints the last digit of the number stored in the variable `n`.
   * the variable `n `stores a different value every time the program is run.
@@ -61,7 +61,7 @@ I also learn;
 	    * if the last digit of `n` is greater than 5: the string `and is greater than 5`
 	    * if the last digit of `n` is 0: the string `and is 0`
 	    * if the last digit of `n` is less than 6 and not 0: the string `and is less than 6 and not 0`
-	  - followed by a new line
+    - followed by a new line
 
 **2. I sometimes suffer from insomnia. And when I can't fall asleep, I play what I call the alphabet game**
 
