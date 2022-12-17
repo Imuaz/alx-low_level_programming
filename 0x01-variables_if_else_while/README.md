@@ -34,7 +34,7 @@ I also learn;
 
 **0. Positive anything is better than negative nothing**
 
-1. [0-positive_or_negative.c](./0-positive_or_negative.c): C program that assigns a random number to the variable `n` each time it is executed.
+- [0-positive_or_negative.c](./0-positive_or_negative.c): C program that assigns a random number to the variable `n` each time it is executed.
   * it is the completion of this [source code](https://alx-intranet.hbtn.io/rltoken/rrqNDWjrCWdARnWFLPExPw).
   * it prints whether the number stored in the variable `n` is positive or negative
   * the variable `n` stores a different value every time the program is run
@@ -48,7 +48,7 @@ I also learn;
 
 **1. The last digit**
 
-2. [1-last_digit.c](./1-last_digit.c): C program that assigns a random number to the variable `n` each time it is executed.
+- [1-last_digit.c](./1-last_digit.c): C program that assigns a random number to the variable `n` each time it is executed.
   * it is the completion of this [source code](https://alx-intranet.hbtn.io/rltoken/5HWhPDsq3jq1yCRQFrLl4Q).
   * it prints the last digit of the number stored in the variable `n`.
   * the variable `n `stores a different value every time the program is run.
