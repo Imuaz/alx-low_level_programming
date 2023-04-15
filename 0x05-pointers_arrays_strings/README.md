@@ -7,10 +7,12 @@ The project covered a range of C programming topics, including pointers and arra
 ## Resources:books:
 
 **Data Structures**
+
 Basics (Read deep into either for explanations of common data structures):
 - [Tutorials Point](https://www.tutorialspoint.com/data_structures_algorithms/data_structures_basics.htm)
 - [Geeks for Geeks](https://www.geeksforgeeks.org/data-structures/)
-How to Select the Appropriate Data Structure:
+
+    How to Select the Appropriate Data Structure:
 - [Career Drill](https://www.careerdrill.com/blog/coding-interview/choosing-the-right-data-structure-to-solve-problems/)
 **Other resources**
 - [C - Arrays](https://www.tutorialspoint.com/cprogramming/c_arrays.htm)
