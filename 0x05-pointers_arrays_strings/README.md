@@ -51,3 +51,18 @@ Basics (Read deep into either for explanations of common data structures):
 |`9-strcpy.c`|`char *_strcpy(char *dest, char *src);`|
 |`100-atoi.c`|`int _atoi(char *s);`|
 |`101-keygen.c`|`int main(void)`|
+
+## Tasks:page_with_curl:
+
+**0. 98 Battery st.**
+- [0-reset_to_98.c](./0-reset_to_98.c): C function that takes a pointer to an `int` as parameter and updates the value it points to to `98`.
+
+**1. Don't swap horses in crossing a stream**
+- [1-swap.c](./1-swap.c): C function that swaps the values of two integers.
+
+**2. This report, by its very length, defends itself against the risk of being read**
+- [2-strlen.c](./2-strlen.c): C function that returns the length of a string.
+
+**3. I do not fear computers. I fear the lack of them**
+- [3-puts.c](./3-puts.c): C function that prints a string, followed by a new line, to `stdout`
+
