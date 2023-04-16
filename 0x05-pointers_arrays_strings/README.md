@@ -52,6 +52,9 @@ Basics (Read deep into either for explanations of common data structures):
 |`100-atoi.c`|`int _atoi(char *s);`|
 |`101-keygen.c`|`int main(void)`|
 
+## Tests:100: :heavy_check_mark:
+- [tests](./tests): folder that contains `main.c` files provided by ALX for testing purposes.
+
 ## Tasks:page_with_curl:
 
 **0. 98 Battery st.**
@@ -66,3 +69,49 @@ Basics (Read deep into either for explanations of common data structures):
 **3. I do not fear computers. I fear the lack of them**
 - [3-puts.c](./3-puts.c): C function that prints a string, followed by a new line, to `stdout`
 
+**4. I can only go one way. I've not got a reverse gear**
+- [4-print_rev.c](./4-print_rev.c): C function that prints a string, in reverse, followed by a new line.
+
+**5. A good engineer thinks in reverse and asks himself about the stylistic consequences of the components and systems he proposes**
+- [5-rev_string.c](./5-rev_string.c): C function that reverses a string.
+
+**6. Half the lies they tell about me aren't true**
+- [6-puts2.c](./6-puts2.c): C function that prints every other character of a string, starting with the first character, followed by a new line.
+
+**7. Winning is only half of it. Having fun is the other half**
+- [7-puts_half.c](./7-puts_half.c): C function that prints half of a string, followed by a new line.
+  - The function prints the second half of the string
+  - If the number of characters is odd, the function prints the last `n` characters of the string, where `n = (length_of_the_string - 1) / 2`
+
+**8. Arrays are not pointers**
+- [8-print_array.c](./8-print_array.c): C function that prints `n` elements of an array of integers, followed by a new line.
+  - The parameter `n` is the number of elements of the array to be printed
+  - Numbers are separated by comma, followed by a space
+  - The numbers are displayed in the same order as they are stored in the array
+  - It does not use the `printf` function.
+
+**9. strcpy**
+- [9-strcpy.c](./9-strcpy.c): C function that copies the string pointed to by `src`, including the terminating null byte (`\0`), to the buffer pointed to by `dest`.
+  - It is similar to the standard library's `strcpy` function
+  - Return value: the pointer to `dest`
+
+**10. Great leaders are willing to sacrifice the numbers to save the people. Poor leaders sacrifice the people to save the numbers**
+- [100-atoi.c](./100-atoi.c): C function that convert a string to an integer.
+  - The number in the string can be preceded by an infinite number of characters
+  - all the `-` and `+` signs before the number has been taken into account
+  - If there are no numbers in the string, the function returns `0`
+  - it is not allowed to use `long`
+  - new variables of “type” array is not declared
+  - it is not allowed to hard-code special values
+  - the `-fsanitize=signed-integer-overflow` gcc flag may be used to compile the code.
+  - The standard library provides a similar function: `atoi`
+
+**11. Don't hate the hacker, hate the code**
+- [101-keygen.c](./101-keygen.c): C program that generates random valid passwords for the program [101-crackme](https://github.com/holbertonschool/0x04.c).
+  - use the standard library is allowed
+  - It is not necessary to pass the `betty-style` tests (but there is need to pass the `betty-doc` tests)
+  - man `srand`, `rand`, `time` helps
+  - `gdb` and `objdump` can also help
+
+## Helper file:raised_hands:
+- [_putchar](./_putchar.c): C function that writes a character `c` to `stdout`, it used instead of standard library's `printf' function.
