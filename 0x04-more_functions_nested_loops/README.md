@@ -98,7 +98,7 @@ By mastering these concepts, complex programming projects can be tackled with co
   - it is not allowed to hard-code special values
 
 ## Header file:file_folder:
-- [main.h](./main.h): header file that contains the prototypes of all functions and the prototype of the function [_putchar](./_putchar.c]
+- [main.h](./main.h): header file that contains the prototypes of all functions and the prototype of the function [_putchar](./_putchar.c)
 
 |File|Function prototype|
 |----|------------------|
