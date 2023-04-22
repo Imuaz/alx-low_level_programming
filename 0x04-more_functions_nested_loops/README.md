@@ -115,3 +115,4 @@ By mastering these concepts, complex programming projects can be tackled with co
 |`10-print_triangle.c`|`void print_triangle(int size);`|
 |`100-prime_factor.c`|`int main(void)`|
 |`101-print_number.c`|`void print_number(int n)`|
+|`_putchar`|`int _putchar(char c)`|
