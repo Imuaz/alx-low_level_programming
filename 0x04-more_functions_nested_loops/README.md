@@ -74,4 +74,44 @@ By mastering these concepts, complex programming projects can be tackled with co
   - It uses the character `#` to print the square
 
 **9. Fizz-Buzz**
-- [
+- [9-fizz_buzz.c](./9-fizz_buzz.c): a program that prints the numbers from `1` to `100`, followed by a new line. But for multiples of three, it  prints `Fizz` instead of the number and for the multiples of five prints `Buzz`. For numbers which are multiples of both three and five it printz `FizzBuzz`.
+  - Each number or word is separated by a space
+  - it is not allowed to use the standard library
+
+**10. Triangles**
+- [10-print_triangle.c](./10-print_triangle.c): function that prints a triangle, followed by a new line.
+  - It uses `_putchar` only function to print
+  - The parameter `size` is the size of the triangle
+  - If `size` is `0` or less, the function prints a new line only
+  - the character `#` is used to print the triangle
+
+**11. The problem of distinguishing prime numbers from composite numbers and of resolving the latter into their prime factors is known to be one of the most important and useful in arithmetic**
+- [100-prime_factor.c](./100-prime_factor.c): program that finds and prints the largest prime factor of the number `612852475143`, followed by a new line.
+  - It is not allowed to use the standard library
+  - the program can be compiled with this command: `gcc -Wall -pedantic -Werror -Wextra -std=gnu89 100-prime_factor.c -o 100-prime_factor -lm`
+
+**12. Numbers have life; they're not just symbols on paper**
+- [101-print_number.c](./101-print_number.c): function that prints an integer.
+  - It uses only `_putchar` function to print
+  - it is not allowed to use `long`
+  - it is not allowed to use arrays or pointers
+  - it is not allowed to hard-code special values
+
+## Header file:file_folder:
+- [main.h](./main.h): header file that contains the prototypes of all functions and the prototype of the function [_putchar](./_putchar.c]
+
+|File|Function prototype|
+|----|------------------|
+|`0-isupper.c`|`int _isupper(int c);`|
+|`1-isdigit.c`|`int _isdigit(int c);`|
+|`2-mul.c`|`int mul(int a, int b);`|
+|`3-print_numbers.c`|`void print_numbers(void);`|
+|`4-print_most_numbers.c`|`void print_most_numbers(void);`|
+|`5-more_numbers.c`|`void more_numbers(void);`|
+|`6-print_line.c`|`void print_line(int n);`|
+|`7-print_diagonal.c`|`void print_diagonal(int n);`|
+|`8-print_square.c`|`void print_square(int size);`|
+|`9-fizz_buzz.c`|`int main (void)`|
+|`10-print_triangle.c`|`void print_triangle(int size);`|
+|`100-prime_factor.c`|`int main(void)`|
+|`101-print_number.c`|`void print_number(int n)`|
