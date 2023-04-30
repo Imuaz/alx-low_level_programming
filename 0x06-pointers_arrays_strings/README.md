@@ -43,3 +43,6 @@ The project is the continuation of the [previous project](../0x05-pointers_array
 
 ## Tasks:page_with_cutl:
 
+## Helper file:raised_hands:
+
+- [_putchar](./_putchar.c):C function that writes a character c to `stdout`, it used instead of standard library's `printf` function.
