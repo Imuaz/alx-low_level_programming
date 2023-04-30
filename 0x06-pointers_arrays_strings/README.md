@@ -41,7 +41,7 @@ The project is the continuation of the [previous project](../0x05-pointers_array
 
 - [tests](./tests): folder that contains `main.c` files provided by ALX and some files for testing purposes.
 
-## Tasks:page_with_cutl:
+## Tasks:page_with_curl:
 
 ## Helper file:raised_hands:
 
