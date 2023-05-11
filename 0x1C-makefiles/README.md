@@ -1,4 +1,4 @@
-# 0x1C. C - Makefiles:c:
+# 0x1C. C - Makefiles:shell:
 
 **INTRODUCTION**
 
@@ -28,8 +28,17 @@ In the following tasks, [these files](https://github.com/holbertonschool/0x1B.c)
 ## Tasks:page_with_curl:
 
 **0. make -f 0-Makefile**
-- [0-Makefile](./0-Makefile): First makefile that requres:
+- [0-Makefile](./0-Makefile): First makefile that requires:
   - name of executable: `school`
   - rules: `all`
     - The all `rule` builds the executable
   - variables: `none`
+
+**1. make -f 1-Makefile**
+- [1-Makefile](./1-Makefile) Requires:
+  - name of executable: `school`
+  - rules: `all`
+    - The `all` rule builds the executable
+  - variables: `CC`, `SRC`
+    - `CC`: the compiler used
+    - `SRC`: the `.c` files
