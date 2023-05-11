@@ -14,23 +14,15 @@ RM = /bin/rm -f
 
 .PHONY: all clean oclean fclean re
 
-all: $(NAME)
-
-$(NAME): m.h $(OBJ)
-$(CC) $^ -o $@
-
-%.o: %.c
-$(CC) $(CFLAGS) -c $< -o $@
+all: m.h $(OBJ)
+	$(CC) $(OBJ) -o $(NAME)
 
 clean:
-$(RM) *~ $(NAME) $(OBJ)
+	$(RM) -f *~ $(NAME)
 
 oclean:
-$(RM) $(OBJ)
+	$(RM) -f $(OBJ)
 
 fclean: clean oclean
 
-re: fclean all
-
-m.h:
-@test -f $@ || echo "$@ not found."
+re: oclean all
