@@ -74,3 +74,25 @@ In the following tasks, [these files](https://github.com/holbertonschool/0x1B.c)
   - The `all` rule recompiles only the updated source files
   - The `clean`, `oclean`, `fclean`, `re` rules should never fail
   - it not allowed to have a list of all the `.o` files
+
+**4. A complete Makefile**
+- [4-Makefile](./4-Makefile): Requires:
+  - name of executable: `school`
+  - rules: `all`, `clean`, `fclean`, `oclean`, `re`
+    - `all`: builds the executable
+    - `clean`: deletes all Emacs and Vim temporary files along with the executable
+    - `oclean`: deletes the object files
+    - `fclean`: deletes all Emacs and Vim temporary files, the executable, and the object files
+    - `re`: forces recompilation of all source files
+  - variables: `CC`, `SRC`, `OBJ`, `NAME`, `RM`, `CFLAGS`
+    - `CC`: the compiler used
+    - `SRC`: the `.c` files
+    - `OBJ`: the `.o` files
+    - `NAME`: the name of the executable
+    - `RM`: the program to delete files
+    - `CFLAGS`: your favorite compiler flags: `-Wall -Werror -Wextra -pedantic`
+  - The `all` rule recompiles only the updated source files
+  - The `clean`, `oclean`, `fclean`, `re` rules never fail
+  :wq
+
+
