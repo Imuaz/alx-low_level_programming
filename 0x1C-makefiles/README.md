@@ -57,3 +57,20 @@ In the following tasks, [these files](https://github.com/holbertonschool/0x1B.c)
   - It is not allowed to have a list of all the `.o` files
 
 **3. make -f 3-Makefile**
+- [3-Makefile](./3-Makefile): Requires:
+  - name of executable: `school`
+  - rules: `all`, `clean`, `oclean`, `fclean`, `re`
+    - `all`: builds the executable
+    - `clean`: deletes all Emacs and Vim temporary files along with the executable
+    - `oclean`: deletes the object files
+    - `fclean`: deletes all Emacs and Vim temporary files, the executable, and the object files
+    - `re`: forces recompilation of all source files
+  - variables: `CC`, `SRC`, `OBJ`, `NAME`, `RM`
+    - `CC`: the compiler used
+    - `SRC`: the `.c` files
+    - `OBJ`: the `.o` files
+    - `NAME`: the name of the executable
+    - `RM`: the program to delete files
+  - The `all` rule recompiles only the updated source files
+  - The `clean`, `oclean`, `fclean`, `re` rules should never fail
+  - it not allowed to have a list of all the `.o` files
