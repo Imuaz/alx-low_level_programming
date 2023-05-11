@@ -26,3 +26,4 @@ This repository contains programs written for the low-level programming and algo
 - [0x15. C - File I/O](./0x15-file_io)
 - [0x17. C - Doubly linked lists](./0x17-doubly_linked_lists)
 - [0x1A. C - Hash tables](./0x1A-hash_tables)
+- [0x1C. C - Makefiles](./0x1C-makefiles)
