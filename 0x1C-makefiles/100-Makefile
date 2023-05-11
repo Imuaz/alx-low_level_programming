@@ -31,3 +31,6 @@ $(RM) $(OBJ)
 fclean: clean oclean
 
 re: fclean all
+
+m.h:
+@test -f $@ || echo "$@ not found."
