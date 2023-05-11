@@ -16,7 +16,7 @@ RM = /bin/rm -f
 
 all: $(NAME)
 
-$(NAME): $(OBJ)
+$(NAME): m.h $(OBJ)
 $(CC) $^ -o $@
 
 %.o: %.c
