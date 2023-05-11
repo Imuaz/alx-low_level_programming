@@ -108,3 +108,31 @@ In the following tasks, [these files](https://github.com/holbertonschool/0x1B.c)
   - First line contains `#!/usr/bin/python3`
   - it is not allowed to import any module
   - Module and function must be documented
+
+**6. make -f 100-Makefile**
+- [100-Makefile](./100-Makefile): Requires:
+  - name of executable: `school`
+  - rules: `all`, `clean`, `fclean`, `oclean`, `re`
+    - `all`: builds the executable
+    - `clean`: deletes all Emacs and Vim temporary files along with the executable
+    - `oclean`: deletes the object files
+    - `fclean`: deletes all Emacs and Vim temporary files, the executable, and the object files
+    - `re`: forces recompilation of all source files
+  - variables: `CC`, `SRC`, `OBJ`, `NAME`, `RM`, `CFLAGS`
+    - `CC`: the compiler used
+    - `SRC`: the `.c` files
+    - `OBJ`: the `.o` files
+    - `NAME`: the name of the executable
+    - `RM`: the program to delete files
+    - `CFLAGS`: compiler flags: `-Wall -Werror -Wextra -pedantic`
+  - The `all` rule recompiles only the updated source files
+  - The `clean`, `oclean`, `fclean`, `re` rules never fail
+  - it is not allowed to have a list of all the `.o` files
+  - `$(RM)` had been used for the cleaning up rules, but the `RM` variable is not set
+  - it is not allowed to use the string `$(CC)` more than once in the Makefile
+  - the string `$(RM)` had not been used more than twice in the Makefile
+  - it is not allowed to use the string `$(CFLAGS)` (but the compiler still uses the flags set in this variable)
+  - it is not allowed to have an `$(OBJ)` rule
+  - it is not allowed to use the `%.o: %.c` rule
+  - the Makefile works even if there is a file in the folder that has the same name as one of the rule
+  - the Makefile should not compile if the header file `m.h` is missing
