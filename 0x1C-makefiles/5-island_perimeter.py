@@ -6,10 +6,12 @@ Defines an island perimeter measuring function.
 
 def island_perimeter(grid):
     """
-    Calculates the perimeter of an island based on a grid representing its cells.
+    Calculates the perimeter of an island based on a grid representing its
+    cells.
 
     Args:
-        grid (List[List[int]]): A two-dimensional grid of 0s and 1s representing the cells of the island.
+        grid (List[List[int]]): A two-dimensional grid of 0s and 1s
+        representing the cells of the island.
 
     Returns:
         int: The perimeter of the island.
@@ -18,7 +20,8 @@ def island_perimeter(grid):
         ValueError: If the input grid is empty or not rectangular.
     """
     if not grid or not all(len(row) == len(grid[0]) for row in grid):
-        raise ValueError("Input grid must be a non-empty rectangular grid of 0s and 1s.")
+        raise ValueError("Input grid must be a non-empty rectangular grid\
+                         of 0s and 1s.")
 
     width = len(grid[0])
     height = len(grid)
