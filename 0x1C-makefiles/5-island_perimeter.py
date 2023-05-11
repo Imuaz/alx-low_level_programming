@@ -1,7 +1,8 @@
 #!/usr/bin/python3
 """
-Island perimeter
+Defines an island perimeter measuring function.
 """
+
 
 def island_perimeter(grid):
     """
@@ -12,7 +13,13 @@ def island_perimeter(grid):
 
     Returns:
         int: The perimeter of the island.
+
+    Raises:
+        ValueError: If the input grid is empty or not rectangular.
     """
+    if not grid or not all(len(row) == len(grid[0]) for row in grid):
+        raise ValueError("Input grid must be a non-empty rectangular grid of 0s and 1s.")
+
     width = len(grid[0])
     height = len(grid)
     edges = 0
@@ -28,4 +35,3 @@ def island_perimeter(grid):
                     edges += 1
 
     return size * 4 - edges * 2
-
