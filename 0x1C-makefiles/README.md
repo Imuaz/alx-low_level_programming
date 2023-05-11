@@ -42,3 +42,18 @@ In the following tasks, [these files](https://github.com/holbertonschool/0x1B.c)
   - variables: `CC`, `SRC`
     - `CC`: the compiler used
     - `SRC`: the `.c` files
+
+**2. make -f 2-Makefile**
+- [2-Makefile](./2-Makefile): First useful Makefile that requires:
+  - name of executable: `school`
+  - rules: `all`
+  - The all rule builds executable
+  - variables: `CC`, `SRC`, `OBJ`, `NAME`
+    - `CC`: the compiler used
+    - `SRC`: the `.c` files
+    - `OBJ`: the `.o` files
+    - `NAME`: the name of the executable
+  - The `all` rule recompiles only the updated source files
+  - It is not allowed to have a list of all the `.o` files
+
+**3. make -f 3-Makefile**
