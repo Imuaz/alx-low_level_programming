@@ -1,7 +1,7 @@
 #Useful Makefile with executable school, variables CC-the compiler, SRC- .c files, OBJ- .o files and NAME- the executable NAME
 CC = gcc
 SRC = school.c main.c
-OBJ = $(SRC:.c=.o)
+OBJ = $(SRC:%.c=%.o)
 NAME = school
 
 all: $(NAME)
