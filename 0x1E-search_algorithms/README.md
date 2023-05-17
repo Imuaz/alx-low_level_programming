@@ -50,6 +50,26 @@ All files containing big O notations should use this format:
 |`105-jump_list.c`|`listint_t *jump_list(listint_t *list, size_t size, int value);`|
 |`106-linear_skip.c`|`skiplist_t *linear_skip(skiplist_t *list, int value);`|
 
+**Data Structures**:
+- for task ***12. Jump search in a singly linked list***;
+```
+typedef struct listint_s
+{
+    int n;
+    size_t index;
+    struct listint_s *next;
+} listint_t;
+```
+- for task ***13. Linear search in a skip list***;
+```
+typedef struct skiplist_s
+{
+    int n;
+    size_t index;
+    struct skiplist_s *next;
+    struct skiplist_s *express;
+} skiplist_t;
+```
 ## Tests:100::heavy_check_mark:
 - [tests](./tests): folder containing the `main.c` files provided by ALX for testing purposes.
 
