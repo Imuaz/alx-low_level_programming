@@ -23,7 +23,7 @@ _read or watch_
 - The prototypes of all functions should be included in a header file called `search_algos.h` and push to the repo.
 - All header files should be include guarded
 
-**NOTE**:!:
+**NOTE**:exclamation:
 
 All files containing big O notations should use this format:
 - `O(1)`
