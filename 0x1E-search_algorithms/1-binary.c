@@ -18,8 +18,7 @@ int binary_search(int *array, size_t size, int value)
 	right_idx = size - 1;
 
 	if (array == NULL)
-		return -1;/*Invalid array*/
-
+		return (-1);/*Invalid array*/
 	while (right_idx >= left_idx)
 	{
 		/*Print the current subarray being searched*/
@@ -34,25 +33,23 @@ int binary_search(int *array, size_t size, int value)
 
 		/*Calculate the middle index of the current subarray*/
 		mid_idx = left_idx + (right_idx - left_idx) / 2;
-
 		/*Check if the value is found at the middle index*/
 		if (array[mid_idx] == value)
 		{
 			return (mid_idx);/*Found the value at index mid_idx*/
 		}
-		/*If the middle value is greater
-		 * than the target value, search the left half
+		/*
+		 * If middle value > target value, search the left half
 		 */
 		if (array[mid_idx] > value)
 		{
 			right_idx = mid_idx - 1;
-		} 
-		/*If the middle value is less than the target value, search the right half*/
+		}
+		/*If middle value < than the target value, search the right half*/
 		else
 		{
 			left_idx = mid_idx + 1;
 		}
 	}
-
 	return (-1); /*Value not found*/
 }
