@@ -1,40 +1,36 @@
-#include "search_algos.h"
+#include <stdio.h>
 
 int bin_search(int *array, size_t left, size_t right, int value);
 /**
- * exponential_search - Searches for a value in a sorted array of integers
- *        using the Exponential search algorithm.
+ * Searches for a value in a sorted array of integers using the Exponential search algorithm.
  *
- * @array: Pointer to the first element of the array to search in
- * @size:  Number of elements in the array
- * @value: Value to search for
- * Return: The index where the value is located, or -1 if not found
- *        or array is NULL
+ * @param array Pointer to the first element of the array to search in
+ * @param size  Number of elements in the array
+ * @param value Value to search for
+ * @return The index where the value is located, or -1 if not found or array is NULL
  */
 int exponential_search(int *array, size_t size, int value)
 {
-	size_t idx = 0, right;
+	size_t idx, left, right;
 
 	if (array == NULL || size == 0)
-		return (-1);
-
-	if (array[0] != value)
 	{
-		idx = 1;
-		while (idx < size && array[idx] <= value)
-		{
-			printf("Value checked array[%ld] = [%d]\n", idx, array[idx]);
-			idx = idx * 2;
-		}
+		return (-1);/*Invalid array or empty array*/
 	}
-
-	if (idx < size)
-		right = idx;
-	else
-		right = size - 1;
-	printf("Value found between indexes [%ld] and [%ld]\n", idx / 2, right);
-
-	return (bin_search(array, idx / 2, right, value));
+	
+	idx = 1;
+	while (idx < size && array[idx] <= value)
+	{
+		printf("Value checked array[%ld] = [%d]\n", idx, array[idx]);
+		idx *= 2;
+	}
+	
+	left = idx / 2;
+	right = (idx < size) ? idx : size - 1;
+	
+	printf("Value found between indexes [%ld] and [%ld]\n", left, right);
+	
+	return (bin_search(array, left, right, value));
 }
 
 /**
@@ -45,34 +41,41 @@ int exponential_search(int *array, size_t size, int value)
  * @right: The ending index.
  * @value: The value to search for.
  * Return: The index where the value is located, or -1 if not found or
- *        array is NULL.
+ * array is NULL.
  */
 int bin_search(int *array, size_t left, size_t right, int value)
 {
-	size_t idx;
+	size_t index, mid;
 
 	if (array == NULL)
-		return (-1);
-
+	{
+		return (-1); /*Invalid array*/
+	}
+	
 	while (right >= left)
 	{
 		printf("Searching in array: ");
-
-		idx = left;
-		while (idx < right)
+		index = left;
+		while (index < right)
 		{
-			printf("%d, ", array[idx]);
-			idx++;
+			printf("%d, ", array[index]);
+			index++;
 		}
-		printf("%d\n", array[idx]);
+		printf("%d\n", array[right]);
 
-		idx = left + (right - left) / 2;
-		if (array[idx] == value)
-			return (idx);
-		if (array[idx] > value)
-			right = idx - 1;
+		mid = left + (right - left) / 2;
+		if (array[mid] == value)
+		{
+			return ((int)mid);
+		}
+		else if (array[mid] > value)
+		{
+			right = mid - 1;
+		}
 		else
-			left = idx + 1;
+		{
+			left = mid + 1;
+		}
 	}
-	return (-1);
+	return (-1); /*Value not found*/
 }
