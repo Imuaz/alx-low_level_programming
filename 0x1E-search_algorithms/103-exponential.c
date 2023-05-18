@@ -2,12 +2,14 @@
 
 int bin_search(int *array, size_t left, size_t right, int value);
 /**
- * Searches for a value in a sorted array of integers using the Exponential search algorithm.
+ * exponential_search - Searches for a value in a sorted array of
+ * integers using the Exponential search algorithm.
  *
- * @param array Pointer to the first element of the array to search in
- * @param size  Number of elements in the array
- * @param value Value to search for
- * @return The index where the value is located, or -1 if not found or array is NULL
+ * @array: Pointer to the first element of the array to search in
+ * @size: Number of elements in the arry
+ * @value: Value to search for
+ * Return: The index where the value is located, or -1 if not found or
+ * array is NULL
  */
 int exponential_search(int *array, size_t size, int value)
 {
@@ -17,19 +19,19 @@ int exponential_search(int *array, size_t size, int value)
 	{
 		return (-1);/*Invalid array or empty array*/
 	}
-	
+
 	idx = 1;
 	while (idx < size && array[idx] <= value)
 	{
 		printf("Value checked array[%ld] = [%d]\n", idx, array[idx]);
 		idx *= 2;
 	}
-	
+
 	left = idx / 2;
 	right = (idx < size) ? idx : size - 1;
-	
+
 	printf("Value found between indexes [%ld] and [%ld]\n", left, right);
-	
+
 	return (bin_search(array, left, right, value));
 }
 
@@ -51,7 +53,7 @@ int bin_search(int *array, size_t left, size_t right, int value)
 	{
 		return (-1); /*Invalid array*/
 	}
-	
+
 	while (right >= left)
 	{
 		printf("Searching in array: ");
