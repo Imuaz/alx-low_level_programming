@@ -12,38 +12,47 @@
  */
 int binary_search(int *array, size_t size, int value)
 {
-	int low, high, mid, index;
+	size_t left_idx, right_idx, mid_idx, i;
 
-	low = 0;
-	high = size - 1;
+	left_idx = 0;
+	right_idx = size - 1;
 
 	if (array == NULL)
-		return (-1);  /*Invalid array*/
+		return -1;/*Invalid array*/
 
-	while (low <= high)
+	while (right_idx >= left_idx)
 	{
-		mid = (low + high) / 2;
+		/*Print the current subarray being searched*/
 		printf("Searching in array: ");
-		index  = low; 
-		while (index <= high)
+		i = left_idx;
+		while (i < right_idx)
 		{
-			printf("%d, ", array[index]);
-			index++;
+			printf("%d, ", array[i]);
+			i++;
 		}
-		printf("\n");
+		printf("%d\n", array[right_idx]);
 
-		if (array[mid] == value)
+		/*Calculate the middle index of the current subarray*/
+		mid_idx = left_idx + (right_idx - left_idx) / 2;
+
+		/*Check if the value is found at the middle index*/
+		if (array[mid_idx] == value)
 		{
-			return (mid); /*Found the value at index mid*/
+			return (mid_idx);/*Found the value at index mid_idx*/
 		}
-		else if (array[mid] < value)
+		/*If the middle value is greater
+		 * than the target value, search the left half
+		 */
+		if (array[mid_idx] > value)
 		{
-			low = mid + 1; /*Search the right half of the array*/
-		}
+			right_idx = mid_idx - 1;
+		} 
+		/*If the middle value is less than the target value, search the right half*/
 		else
 		{
-			high = mid - 1;  /*Search the left half of the array*/
+			left_idx = mid_idx + 1;
 		}
 	}
+
 	return (-1); /*Value not found*/
 }
