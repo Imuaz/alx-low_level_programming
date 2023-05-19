@@ -5,6 +5,17 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+#define CHECK_AND_PRINT(jump) \
+    do { \
+        if ((jump)->express != NULL) { \
+            (jump) = (jump)->express; \
+            printf("Value checked at index [%ld] = [%d]\n", \
+                   (jump)->index, (jump)->n); \
+        } else { \
+            while ((jump)->next != NULL) \
+                (jump) = (jump)->next; \
+        } \
+    } while (0)
 /**
  * struct listint_s - singly linked list
  *
