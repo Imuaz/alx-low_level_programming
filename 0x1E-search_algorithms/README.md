@@ -210,3 +210,5 @@ int **allocate_map(int n, int m)
 
 **15. Big O #7**
 - [108-O](./108-O): file contains the `vime complexity` average case) of a jump search in a skip list of size `n`, with an express lane using `step = sqrt(n)`
+
+    :+1:
