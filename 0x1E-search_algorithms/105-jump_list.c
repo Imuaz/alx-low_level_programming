@@ -6,7 +6,7 @@
  * @list: a pointer to the head of the list to search in
  * @size: the number of nodes in list
  * @value: the value to search for
- * 
+ *
  * Return: a pointer to the first node where value is located, NULL If value
  *         is not present in head or if head is NULL
  */
