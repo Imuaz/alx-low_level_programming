@@ -1,6 +1,5 @@
 #include "search_algos.h"
 
-int binary_search_recursive(int *array, size_t left, size_t right, int value);
 /**
  * advanced_binary - Searches for a value in a sorted array of integers
  * using advanced binary search.
@@ -30,27 +29,28 @@ int advanced_binary(int *array, size_t size, int value)
  */
 int binary_search_recursive(int *array, size_t left, size_t right, int value)
 {
-	size_t i, j;
+	size_t mid_idx, index;
 
-	i = left + (right - left) / 2;
+	mid_idx = left + (right - left) / 2;
 
 	if (right < left)
 		return (-1);
 
 	printf("Searching in array: ");
-	
-	j = left; 
-	while (j < right)
+
+	index = left;
+	while (index < right)
 	{
-		printf("%d, ", array[j]);
-		j++;
+		printf("%d, ", array[index]);
+		index++;
 	}
 	printf("%d\n", array[right]);
 
-	if (array[i] == value && (i == left || array[i - 1] != value))
-		return (i);
-	else if (array[i] >= value)
-		return (binary_search_recursive(array, left, i, value));
+	if (array[mid_idx] == value && (mid_idx == left || array[mid_idx - 1] !=
+				value))
+		return (mid_idx);
+	else if (array[mid_idx] >= value)
+		return (binary_search_recursive(array, left, mid_idx, value));
 	else
-		return (binary_search_recursive(array, i + 1, right, value));
+		return (binary_search_recursive(array, mid_idx + 1, right, value));
 }
