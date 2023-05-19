@@ -37,7 +37,7 @@ All files containing big O notations should use this format:
 - …
 
 ## Header file:open_file_folder:
-- [search_algos.h](./search_algos.h): header file containing prototypes of all functions used kn the project.
+- [search_algos.h](./search_algos.h): header file contains the ALX provided prototypes of all functions, prototypes of some helper functions, and data structure definitions used in the project.
 
 |File|Prototype|
 |----|---------|
@@ -70,8 +70,14 @@ typedef struct skiplist_s
     struct skiplist_s *express;
 } skiplist_t;
 ```
+
+## Helper files:raised_hands:
+- [listint](./listint): folder contains 
+`free_list.c`, `free_list.c`, and `print_list.c` files used for testing task _12. Jump search in a singly linked list_.
+- [skiplist](./skiplist): folder contains `create_skiplist.c`, `free_skiplist.c`, and `print_skiplist.c` files used for testing task _13. Linear search in a skip listint_
+
 ## Tests:100::heavy_check_mark:
-- [tests](./tests): folder containing the `main.c` files provided by ALX for testing purposes.
+- [tests](./tests): folder contains the `main.c` files provided by ALX for testing purposes.
 
 ## Tasks:page_with_curl:
 
