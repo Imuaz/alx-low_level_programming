@@ -73,8 +73,8 @@ typedef struct skiplist_s
 
 ## Helper files:raised_hands:
 - [listint](./listint): folder contains 
-`free_list.c`, `free_list.c`, and `print_list.c` files used for testing task _12. Jump search in a singly linked list_.
-- [skiplist](./skiplist): folder contains `create_skiplist.c`, `free_skiplist.c`, and `print_skiplist.c` files used for testing task _13. Linear search in a skip listint_
+`free_list.c`, `free_list.c`, and `print_list.c` files used for testing task ***12. Jump search in a singly linked list***.
+- [skiplist](./skiplist): folder contains `create_skiplist.c`, `free_skiplist.c`, and `print_skiplist.c` files used for testing task ***13. Linear search in a skip listint***.
 
 ## Tests:100::heavy_check_mark:
 - [tests](./tests): folder contains the `main.c` files provided by ALX for testing purposes.
